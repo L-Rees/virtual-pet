@@ -119,28 +119,42 @@ public class UniKitty {
 
 	public void reaction() {
 
+		
+		
+		
+		
 	}
 	
 	public String showPositivity() {
-		return ("Bad-" + showLevel(getPositivityLevel()) + "-Great!");
+		return ("Positivity:\nBad-" + showLevel(getPositivityLevel()) + "-Just Great\n");
+	}
+	
+	public String showHunger() {
+		return ("Hunger:\nGood-" + showLevel(gethungerLevel())) + "-Starving\n";
+	}
+	
+	public String showBoredom() {
+		return ("Boredom:\nAwesome-" + showLevel(getBoredomLevel())) + "-Yawnsville\n";
+	}
+	public String showBeauty() {
+		return ("Beauty:\nUggo-" + showLevel(getBeautyLevel())) + "-An angel\n";
 	}
 	
 	public String showLevel(int quality) {
 		String level = "";
 		for (int i = 0; i < quality; i++ ) {
-			level += "|";
+			level = level + "|";
 		}
-		for (int i = 0; i< 10-quality; i--) {
-			level += ".";
+		for (int i = 0; i < 10-quality; i++) {
+			level = level + ".";
 		}
 		return level;
 				
-				
+				//  Bad-||||......-Great!
 	}
 
-	public String getStatus() {
-		return "Positive Thinking " + getPositivityLevel() + "\nTummy Grumbles" + gethungerLevel() + "\nYawn Factor"
-				+ getBoredomLevel() + "\nBeauty" + getBeautyLevel();
+	public void getStatus() {
+		System.out.println(showPositivity() + showHunger() + showBeauty() +  showBoredom());
 	}
 
 	public void beOffended() {

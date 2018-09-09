@@ -8,7 +8,10 @@ public class UniKittyApp {
 		UniKitty unikitty = new UniKitty();
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println(unikitty.showPositivity());
+		
+		unikitty.getStatus();
+		System.out.println("What would you like to do with UniKitty?");
+	
 	}
 
 }
