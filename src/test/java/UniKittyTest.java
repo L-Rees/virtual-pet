@@ -35,12 +35,12 @@ public class UniKittyTest {
 		int check = underTest.getPositivityLevel();
 		assertEquals(check, 5);
 	}
-	@Test
-	public void shouldDecreaseHungerFrom5To1WithFeeding() {
-		underTest.feed();
-		int check = underTest.gethungerLevel();
-		assertEquals(check, 1);
-	}
+//	@Test
+//	public void shouldDecreaseHungerFrom5To1WithFeeding() {
+//		underTest.feed();
+//		int check = underTest.gethungerLevel();
+//		assertEquals(check, 1);
+//	}
 	@Test
 	public void shouldIncreaseHungerFrom5to6WithTick() {
 		underTest.tick();
@@ -53,12 +53,12 @@ public class UniKittyTest {
 //		int check = underTest.getBoredomLevel();
 //		assertEquals(check, 7);
 //	}
-	@Test
-	public void shouldIncreasePositivityfrom5To7WithHungerLevelOf1() {
-		underTest.feed();
-		int check = underTest.getPositivityLevel();
-		assertEquals(check, 7);
-	}
+//	@Test
+//	public void shouldIncreasePositivityfrom5To7WithHungerLevelOf1() {
+//		underTest.feed();
+//		int check = underTest.getPositivityLevel();
+//		assertEquals(check, 7);
+//	}
 //	@Test
 //	public void shouldIncreasePositivityFrom5to6WithACompliment() {
 //		underTest.compliment();

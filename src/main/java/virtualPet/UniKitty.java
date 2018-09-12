@@ -49,13 +49,8 @@ public class UniKitty {
 		this.boredomLevel = 2;
 	}
 
-	public void feed() {
-		System.out.println("What would you like to feed your sweet little adorable UniKitty?");
-		System.out.println("1 a can of tuna");
-		System.out.println("2 a rainbow sparkle cupcake");
-		System.out.println("3 a mouse");
-		String foodChoice = input.nextLine();
-		System.out.println("\n\n\n");
+	public void feed(String foodChoice) {
+
 		if (foodChoice.equals("1")) {
 			beBored();
 			beHungry();
@@ -94,16 +89,7 @@ public class UniKitty {
 		}
 	}
 
-	public void compliment() {
-		System.out.println("What compliment would you like to use?");
-		System.out.println("1 UniKitty, you're so lovely you make my heart happy!");
-		System.out.println("2 You're very well preserved for your age.");
-		System.out.println("3 I can barely tell you're so tired!");
-		System.out.println("4 You're like a beautiful painting made of magic and sparkles!");
-		System.out.println("5 Good UniKitty!");
-		System.out.println("6 I think you're almost as cool as Emmett.");
-		String compliment = input.nextLine();
-		System.out.println("\n\n\n");
+	public void complimentResponse(String compliment) {
 
 		if (compliment.equals("1") || compliment.equals("4")) {
 			beVain();
@@ -143,7 +129,7 @@ public class UniKitty {
 		} else if (getBoredomLevel() > 7) {
 			beBored();
 		} else if (getBeautyLevel() > 10) {
-			bePrimped();
+			bePretty();
 		} else if (getPositivityLevel() > 10) {
 			bePretty();
 		}
@@ -184,13 +170,20 @@ public class UniKitty {
 				"UNIKITTY STATUS:\n" + showPositivity() + showBeauty() + "\n\n" + showHunger() + showBoredom());
 	}
 
+	String name2 =  "              _ _    _ _   _         \n" +
+			"  /\\ /\\ _ __ (_) | _(_) |_| |_ _   _ \n" +
+			" / / \\ \\ '_ \\| | |/ / | __| __| | | | \n" +
+			" \\ \\_/ / | | | |   <| | |_| |_| |_| | \n" +
+			"  \\___/|_| |_|_|_|\\_\\_|\\__|\\__|\\__, | \n" +
+			"                               |___/ \n" ;
+	
 	String asciiName = "  _    _       _ _    _ _   _         \n" + " | |  | |     (_) |  (_) | | |        \n"
 			+ " | |  | |_ __  _| | ___| |_| |_ _   _ \n" + " | |  | | '_ \\| | |/ / | __| __| | | |\n"
 			+ " | |__| | | | | |   <| | |_| |_| |_| |\n" + "  \\____/|_| |_|_|_|\\_\\_|\\__|\\__|\\__, |\n"
 			+ "                                 __/ |\n" + "                                |___/ \n";
 
 	public void intro() {
-		System.out.println(asciiName);
+		System.out.println(name2);
 		bePretty();
 		getStatus();
 	}
@@ -298,4 +291,5 @@ public class UniKitty {
 		System.out.println(catBike);
 		System.exit(0);
 	}
+	
 }
